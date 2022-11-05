@@ -27,11 +27,12 @@ const Game = () => {
   };
 
   return (
-    <div>
-      <Board cell={cells} onClick={handleClick} />
-      <p style={{fontSize: 30, fontFamily: "sans-serif"}}>
+    <div style={{ textAlign: "center" }}>
+      <p style={{ fontSize: 30, fontFamily: "sans-serif" }}>
         {winner ? "Winner: " + winner : "Next Player: " + (xIsNext ? "X" : "O")}
       </p>
+      <Board cell={cells} onClick={handleClick} />
+      <br />
       {startNewGame()}
     </div>
   );
